@@ -1,4 +1,4 @@
-USE kenshudb;
+USE playgrounddb;
 
 INSERT INTO tags
   (id, name)

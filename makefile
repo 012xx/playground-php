@@ -6,13 +6,13 @@ up:
 	docker-compose up -d
 down:
 	docker-compose down
-kenshu-php:
-	docker exec -it kenshu-php bash
-kenshu-mysql:
-	docker exec -it kenshu-mysql bash
+playground-php:
+	docker exec -it playground-php bash
+playground-mysql:
+	docker exec -it playground-mysql bash
 composer-install:
-	docker exec kenshu-php composer install
+	docker exec playground-php composer install
 dump-autoload:
-	docker exec kenshu-php composer dump-autoload
+	docker exec playground-php composer dump-autoload
 migrate:
-	docker exec kenshu-php vendor/bin/phinx migrate -e development
+	docker exec playground-php vendor/bin/phinx migrate -e development

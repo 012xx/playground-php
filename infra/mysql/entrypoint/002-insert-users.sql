@@ -1,4 +1,4 @@
-USE kenshudb;
+USE playgrounddb;
 
 INSERT INTO users 
   (id, name, password_hash)

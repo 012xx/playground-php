@@ -1,29 +1,30 @@
 version: "3.8"
 services:
-  kenshu-php:
+  playground-php:
     build:
       context: ./infra/php
       dockerfile: Dockerfile
-    container_name: kenshu-php
+    container_name: playground-php
+    working_dir: /var/www/html
     env_file:
       - ./config/.env.local
     environment:
-      - MYSQL_DATABASE=kenshudb
-      - MYSQL_HOST=kenshu-mysql
+      - MYSQL_DATABASE=playgrounddb
+      - MYSQL_HOST=playground-mysql
     ports:
       - 80:80
     volumes:
       - ./htdocs:/var/www/html
     depends_on:
-      - kenshu-mysql
+      - playground-mysql
     links:
-      - kenshu-mysql
+      - playground-mysql
 
-  kenshu-mysql:
+  playground-mysql:
     build:
       context: ./infra/mysql
       dockerfile: Dockerfile
-    container_name: kenshu-mysql
+    container_name: playground-mysql
     env_file:
       - ./config/.env.local
     ports:

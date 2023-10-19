@@ -1,4 +1,4 @@
-USE kenshudb;
+USE playgrounddb;
 
 INSERT INTO articles
   (id, title, body, user_id)

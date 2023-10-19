@@ -1,4 +1,4 @@
-USE kenshudb;
+USE playgrounddb;
 
 CREATE TABLE IF NOT EXISTS `users`
 (

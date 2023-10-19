@@ -1,6 +1,6 @@
-# kenshu-backend-php
+# playground-php
 
-## 新卒研修バックエンド　記事投稿サービス
+## 記事投稿サービス
 
 ---
 
@@ -20,7 +20,7 @@
 
 Docker 20.10.5
 
-PHP 7.4
+PHP 8.2
 
 MySQL 5.7
 
