@@ -20,7 +20,7 @@ Docker 20.10.5
 
 PHP 8.2
 
-MySQL 5.7
+MySQL 8.0
 
 # 環境構築
 
@@ -31,5 +31,7 @@ $ make init
 ```
 
 ## DB構造
-![image](https://github.com/012xx/playground-php/assets/79149878/34cb18ba-f2ee-40ee-8b28-bce30d8c1d5d)
+
+![image](https://github.com/012xx/playground-php/assets/79149878/29c90693-087e-410b-ac7e-1652baa3c0ff)
+
 
