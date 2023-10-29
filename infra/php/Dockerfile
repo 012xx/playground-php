@@ -29,3 +29,6 @@ RUN /bin/sh -c a2enmod rewrite
 
 COPY ./php.ini /usr/local/etc/php/
 COPY ./000-default.conf /etc/apache2/sites-enabled/
+
+RUN docker-php-ext-install mysqli
+
