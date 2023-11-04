@@ -30,8 +30,3 @@ MySQL 8.0
 $ make init
 ```
 
-## DB構造
-
-![image](https://github.com/012xx/playground-php/assets/79149878/29c90693-087e-410b-ac7e-1652baa3c0ff)
-
-
