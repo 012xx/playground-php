@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #333;
+  font-size: 1rem;
+  font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+images {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+.readmore {
+  font-size: 0.875rem;
+  text-align: center;
+}
+/*
+疑似要素で下線を設定するために、「position: relative;」を設定
+*/
+.readmore a {
+  padding-bottom: 1px;
+  color: #333;
+  position: relative;
+}
+/*
+「position: absolute;」を設定し、left、bottomで下線の位置を調整
+widthとheightで線の長さと高さを設定
+疑似要素で線を表示させるためには、「content: '';」を設定すること
+「transition: all 200ms ease;」でホバー時の速度などを設定
+*/
+.readmore a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #333;
+  transition: all 200ms ease;
+}
+/*
+ホバー時の下線の設定
+「opacity: 0;」下線を非表示
+「transform: translateY(3px);」下に3px移動
+→下に3px移動しながら下線を非表示にする
+*/
+.readmore a:hover::after {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+#header {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+}
+#header .site-title {
+  padding: 20px 16px;
+  line-height: 1px;
+}
+/*
+「display: inline-block;」でリンクを親要素の範囲に広げる
+※blockを指定すると横幅いっぱいまで広がってしまうため、
+inline-blockを設定している
+*/
+#header .site-title a {
+  display: inline-block;
+}
+#navi {
+  background-color: #333;
+}
+#navi a {
+  color: #fff;
+}
+#navi ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#navi li {
+  font-size: 0.875rem;
+  padding: 10px 60px 10px 0;
+}
+
+#pickup {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 150px;
+  margin-bottom: 60px;
+}
+#pickup article {
+  width: 32%;
+}
+#pickup .article-title {
+  font-size: 1rem;
+  margin: 10px 0 15px 0;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+main {
+  width: 65%;
+}
+main article {
+  margin-bottom: 80px;
+}
+main .article-title {
+  font-size: 1.5rem;
+  margin: 10px 0 15px 0;
+}
+main ul {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+main li {
+  font-size: 0.875rem;
+  margin-right: 20px;
+}
+main .text {
+  padding: 10px 40px 30px 40px;
+}
+
+.author {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.author images {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.author .profile {
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  #header .site-title {
+    padding: 20px 16px;
+  }
+
+  #pickup {
+    flex-direction: column;
+    padding-top: 140px;
+  }
+  #pickup article {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #container {
+    flex-direction: column;
+  }
+  main {
+    width: 100%;
+  }
+}
