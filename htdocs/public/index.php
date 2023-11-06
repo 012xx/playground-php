@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>playground-php</title>
     <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキス">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/favicon.ico">
@@ -17,19 +17,19 @@
 
     <div id="pickup" class="wrapper">
       <article>
-        <images src="images/pickup1.jpg" alt="テキストテキストテキスト">
+        <img src="images/photo1.jpg" alt="テキストテキストテキスト" class="thumbnail">
         <h2 class="article-title">タイトルテキストテキストテキストテキストテキストテキストテキスト</h2>
         <div class="readmore"><a href="#">READ MORE</a></div>
       </article>
 
       <article>
-        <images src="images/pickup2.jpg" alt="テキストテキストテキスト">
+        <img src="images/photo1.jpg" alt="テキストテキストテキスト" class="thumbnail">
         <h2 class="article-title">タイトルテキストテキストテキストテキストテキストテキストテキスト</h2>
         <div class="readmore"><a href="#">READ MORE</a></div>
       </article>
 
       <article>
-        <images src="images/pickup3.jpg" alt="テキストテキストテキスト">
+        <img src="images/photo1.jpg" alt="テキストテキストテキスト" class="thumbnail">
         <h2 class="article-title">タイトルテキストテキストテキストテキストテキストテキストテキスト</h2>
         <div class="readmore"><a href="#">READ MORE</a></div>
       </article>
