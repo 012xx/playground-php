@@ -11,8 +11,12 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/monokai.min.css">
 </head>
 <body>
+<div id="editor-header">
+  <button id="save-draft">下書き保存</button>
+  <button id="publish">公開</button>
+</div>
 <div id="editor-container">
-    <textarea id="markdown-editor"></textarea>
+    <textarea id="markdown-editor" placeholder="Markdown形式でここに内容を記入"></textarea>
     <div id="markdown-preview"></div>
 </div>
 <script src="js/editor.js"></script>
