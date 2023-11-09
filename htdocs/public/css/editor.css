@@ -67,15 +67,17 @@ body {
   outline: none;
   font-size: 1.2rem;
   font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
 }
 
 #save-draft {
-  background-color: #ffecb3;
-  color: #333;
+  background-color: #FFF;
+  color: #bb65bf;
+  border: 2px solid #bb65bf;
 }
 
 #publish {
-  background-color: #4caf50;
+  background-color: #a432aa;
   color: #fff;
   margin-right: 3.2rem;
 }
