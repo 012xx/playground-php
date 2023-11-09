@@ -19,7 +19,7 @@
       <button id="login">ログイン</button>
     </header>
 
-    <div id="pickup" class="wrapper">
+    <div id="blog" class="wrapper">
       <article>
         <img src="images/photo1.jpg" alt="テキストテキストテキスト" class="thumbnail">
         <h2 class="article-title">タイトルテキストテキストテキストテキストテキストテキストテキスト</h2>

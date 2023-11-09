@@ -5,7 +5,7 @@ html {
 }
 body {
   color: #333;
-  font-size: 1.0rem;
+  font-size: 1rem;
   font-family: "Noto Sans", "Noto Sans JP", sans-serif;
 }
 a {
@@ -21,7 +21,7 @@ li {
 }
 
 .wrapper {
-  max-width: 120.0rem;
+  max-width: 120rem;
   padding: 0 1.6rem;
   margin: 0 auto;
 }
@@ -33,7 +33,7 @@ li {
 疑似要素で下線を設定するために、「position: relative;」を設定
 */
 .readmore a {
-  padding-bottom: 1.0rem;
+  padding-bottom: 1rem;
   color: #333;
   position: relative;
 }
@@ -71,8 +71,8 @@ widthとheightで線の長さと高さを設定
   z-index: 10;
 }
 #header .site-title {
-  padding: 2.0rem 1.6rem;
-  line-height: 1.0rem;
+  padding: 2rem 1.6rem;
+  line-height: 1rem;
 }
 /*
 「display: inline-block;」でリンクを親要素の範囲に広げる
@@ -95,60 +95,60 @@ inline-blockを設定している
 }
 #navi li {
   font-size: 0.875rem;
-  padding: 1.0rem 6.0rem 1.0rem 0;
+  padding: 1rem 6rem 1rem 0;
 }
 
-#pickup {
+#blog {
   display: flex;
   justify-content: space-between;
-  padding-top: 8.0rem;
-  margin-bottom: 6.0rem;
+  padding-top: 8rem;
+  margin-bottom: 6rem;
 }
-#pickup article {
+#blog article {
   width: 32%;
 }
-#pickup .article-title {
+#blog .article-title {
   font-size: 1.6rem;
-  margin: 1.0rem 0 1.5rem 0;
+  margin: 1rem 0 1.5rem 0;
 }
 
 #container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 6.0rem;
+  margin-bottom: 6rem;
 }
 main {
   width: 65%;
 }
 main article {
-  margin-bottom: 8.0rem;
+  margin-bottom: 8rem;
 }
 main .article-title {
   font-size: 1.5rem;
-  margin: 1.0rem 0 1.5rem 0;
+  margin: 1rem 0 1.5rem 0;
 }
 main ul {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 1.0rem;
+  margin-bottom: 1rem;
 }
 main li {
   font-size: 0.875rem;
-  margin-right: 2.0rem;
+  margin-right: 2rem;
 }
 main .text {
-  padding: 1.0rem 4.0rem 3.0rem 4.0rem;
+  padding: 1rem 4rem 3rem 4rem;
 }
 
 .author {
   text-align: center;
-  margin-bottom: 6.0rem;
+  margin-bottom: 6rem;
 }
 .author img {
-  width: 13.0rem;
-  height: 13.0rem;
+  width: 13rem;
+  height: 13rem;
   border-radius: 50%;
-  margin-bottom: 3.0rem;
+  margin-bottom: 3rem;
 }
 .author .profile {
   font-size: 0.875rem;
@@ -157,22 +157,22 @@ main .text {
 
 #login {
   background-color: #a432aa;
-  color: #FFF;
+  color: #fff;
   border: 2px solid #a432aa;
 }
 
 @media screen and (max-width: 767px) {
   #header .site-title {
-    padding: 2.0rem 1.6rem;
+    padding: 2rem 1.6rem;
   }
 
-  #pickup {
+  #blog {
     flex-direction: column;
-    padding-top: 14.0rem;
+    padding-top: 14rem;
   }
-  #pickup article {
+  #blog article {
     width: 100%;
-    margin-bottom: 3.0rem;
+    margin-bottom: 3rem;
   }
 
   #container {
