@@ -101,7 +101,7 @@ inline-blockを設定している
 #pickup {
   display: flex;
   justify-content: space-between;
-  padding-top: 15.0rem;
+  padding-top: 8.0rem;
   margin-bottom: 6.0rem;
 }
 #pickup article {
@@ -153,6 +153,12 @@ main .text {
 .author .profile {
   font-size: 0.875rem;
   text-align: left;
+}
+
+#login {
+  background-color: #a432aa;
+  color: #FFF;
+  border: 2px solid #a432aa;
 }
 
 @media screen and (max-width: 767px) {

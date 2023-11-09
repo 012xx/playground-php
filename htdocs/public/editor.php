@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Markdown Editor</title>
+<link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/editor.css">
 <link rel="stylesheet" href="css/github.css">
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -14,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="editor-header">
+<div id="header">
   <button id="save-draft">下書き保存</button>
   <button id="publish">公開</button>
 </div>

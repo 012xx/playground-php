@@ -10,12 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
     <header id="header">
+      <button id="login">ログイン</button>
     </header>
 
     <div id="pickup" class="wrapper">
