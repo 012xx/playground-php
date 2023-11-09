@@ -1,44 +1,46 @@
 html {
   height: 100%;
+  font-size: 62.5%;
 }
 
 body {
   display: flex;
-  flex-direction: column; /* 縦方向のフレックスボックス */
-  justify-content: center; /* 水平方向の中央揃え */
+  flex-direction: column;
+  justify-content: center;
 }
 
 #editor-container {
   display: flex;
-  margin-top: 50px;
+  margin-top: 5.0rem;
 }
 
 @media screen and (min-width: 1440px) {
   #editor-container {
   display: flex;
-  margin-top: 100px 0;
+  margin-top: 10.0rem 0;
 }
 }
 
 #markdown-editor {
   width: 50%;
   height: 75vh;
-  padding: 10px;
+  padding: 1.0rem;
   font-size: 16px;
   border: 2px solid #c3b7cc;
   outline: none;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   background-color: #e1dbe6;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 #markdown-preview {
   width: 50%;
   height: 75vh;
-  padding: 10px;
+  padding: 1.0rem;
   overflow-y: auto;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   background-color: #FFF;
-  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2); /* 影の色と透明度を調整 */
+  box-shadow: 0.8rem 0.8rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
 #editor-header {
@@ -48,37 +50,38 @@ body {
   min-width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 8px;
+  padding: 0.8rem;
   background-color: #f3f3f3;
   border-bottom: 1px solid #e1e1e1;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* ぼかし効果のある影を追加 */
+  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.2);
   z-index: 10;
 }
 
 #save-draft,
 #publish {
-  padding: 4px 12px; /* ボタンのパディング */
-  margin-left: 8px; /* ボタン間のスペース */
+  padding: 0.4rem 1.2rem;
+  margin-left: 0.8rem;
   border: none;
-  border-radius: 4px; /* 角丸 */
-  cursor: pointer; /* マウスカーソルをポインターに */
+  border-radius: 0.4rem;
+  cursor: pointer;
   outline: none;
-  font-size: 12px;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 #save-draft {
-  background-color: #ffecb3; /* 下書きボタンの背景色 */
-  color: #333; /* 下書きボタンのテキスト色 */
+  background-color: #ffecb3;
+  color: #333;
 }
 
 #publish {
-  background-color: #4caf50; /* 公開ボタンの背景色 */
-  color: #fff; /* 公開ボタンのテキスト色 */
-  margin-right: 32px;
+  background-color: #4caf50;
+  color: #fff;
+  margin-right: 3.2rem;
 }
 
 #save-draft:hover,
 #publish:hover {
-  opacity: 0.9; /* ホバー時の透明度変化 */
+  opacity: 0.8;
 }
 
