@@ -1,12 +1,12 @@
 USE playground-db
 
-CREATE TABLE IF NOT EXISTS `User` (
+CREATE TABLE IF NOT EXISTS `user` (
     user_id UUID PRIMARY KEY NOT NULL UNIQUE,
     name VARCHAR(32) NOT NULL,
     password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Article` (
+CREATE TABLE IF NOT EXISTS `article` (
     article_id UUID PRIMARY KEY NOT NULL UNIQUE,
     title VARCHAR(64) NOT NULL,
     context VARCHAR(20000) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `Article` (
 );
 
 
-CREATE TABLE IF NOT EXISTS `Image` (
+CREATE TABLE IF NOT EXISTS `image` (
     article_id UUID NOT NULL,
     image_id UUID NOT NULL UNIQUE,
     file_path VARCHAR(255) NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `Image` (
 );
 
 
-CREATE TABLE IF NOT EXISTS `Thumbnail` (
+CREATE TABLE IF NOT EXISTS `thumbnail` (
     article_id UUID NOT NULL,
     image_id UUID NOT NULL,
     created_at TIMESTAMP NOT NULL,
@@ -48,14 +48,14 @@ CREATE TABLE IF NOT EXISTS `Thumbnail` (
     ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS `Tag` (
+CREATE TABLE IF NOT EXISTS `tag` (
     tag_id UUID PRIMARY KEY NOT NULL UNIQUE,
     name VARCHAR(32) NOT NULL,
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `ArticleTag` (
+CREATE TABLE IF NOT EXISTS `articletag` (
     article_id UUID NOT NULL,
     tag_id UUID NOT NULL,
     created_at TIMESTAMP NOT NULL,
