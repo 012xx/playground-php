@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS `article` (
     article_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(64) NOT NULL,
     context TEXT NOT NULL,
+    is_draft tinyint(1) NOT NULL,
     user_id INT UNSIGNED NOT NULL,
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP NOT NULL,
