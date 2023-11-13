@@ -1,8 +1,6 @@
-USE playground-db
-
-INSERT INTO tags
-  (id, name)
+INSERT INTO tag
+  (name, created_at, updated_at)
 VALUES
-  (1, 'テストタグ'),
-  (2, 'エイプリルドリーム'),
-  (3, 'Hello World');
+  ('テストタグ', NOW(), NOW()),
+  ('エイプリルドリーム', NOW(), NOW()),
+  ('Hello World', NOW(), NOW());

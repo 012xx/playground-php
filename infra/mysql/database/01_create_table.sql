@@ -1,72 +1,67 @@
-USE playground-db
+USE playground-db;
 
 CREATE TABLE IF NOT EXISTS `user` (
-    user_id UUID PRIMARY KEY NOT NULL UNIQUE,
+    user_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(32) NOT NULL,
     password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS `article` (
-    article_id UUID PRIMARY KEY NOT NULL UNIQUE,
+    article_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(64) NOT NULL,
-    context VARCHAR(20000) NOT NULL,
-    user_id UUID NOT NULL,
+    context TEXT NOT NULL,
+    user_id INT UNSIGNED NOT NULL,
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP NOT NULL,
 
     FOREIGN KEY (user_id)
-    REFERENCES User (user_id)
+    REFERENCES user (user_id)
     ON DELETE CASCADE
 );
 
-
 CREATE TABLE IF NOT EXISTS `image` (
-    article_id UUID NOT NULL,
-    image_id UUID NOT NULL UNIQUE,
+    article_id INT UNSIGNED NOT NULL,
+    image_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     file_path VARCHAR(255) NOT NULL,
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP NOT NULL,
 
-    PRIMARY KEY (article_id, image_id),
     FOREIGN KEY (article_id)
-    REFERENCES Article (article_id)
+    REFERENCES article (article_id)
     ON DELETE CASCADE
 );
 
-
 CREATE TABLE IF NOT EXISTS `thumbnail` (
-    article_id UUID NOT NULL,
-    image_id UUID NOT NULL,
+    article_id INT UNSIGNED NOT NULL,
+    image_id INT UNSIGNED NOT NULL,
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP NOT NULL,
 
     PRIMARY KEY (article_id, image_id),
     FOREIGN KEY (article_id)
-    REFERENCES Article (article_id),
+    REFERENCES article (article_id),
     FOREIGN KEY (image_id)
-    REFERENCES Image (image_id)
+    REFERENCES image (image_id)
     ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS `tag` (
-    tag_id UUID PRIMARY KEY NOT NULL UNIQUE,
+    tag_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(32) NOT NULL,
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS `articletag` (
-    article_id UUID NOT NULL,
-    tag_id UUID NOT NULL,
+    article_id INT UNSIGNED NOT NULL,
+    tag_id INT UNSIGNED NOT NULL,
     created_at TIMESTAMP NOT NULL,
     updated_at TIMESTAMP NOT NULL,
 
     PRIMARY KEY (article_id, tag_id),
     FOREIGN KEY (article_id)
-    REFERENCES Article (article_id),
+    REFERENCES article (article_id),
     FOREIGN KEY (tag_id)
-    REFERENCES Tag (tag_id)
+    REFERENCES tag (tag_id)
     ON DELETE CASCADE
 );
-
-
