@@ -1,6 +1,6 @@
 # 各 Table の構造一覧
 
-# User
+# user
 
 | Field         | Type             | Null | Key | Default           | Extra                       |
 | :------------ | :--------------- | :--- | --- | ----------------- | --------------------------- |
@@ -10,7 +10,7 @@
 | created_at    | timestamp        | NO   |     | CURRENT_TIMESTAMP |                             |
 | updated_at    | timestamp        | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |
 
-# Article
+# article
 
 | Field        | Type             | Null | Key | Default           | Extra                       |
 | :----------- | :--------------- | :--- | --- | ----------------- | --------------------------- |
@@ -21,7 +21,7 @@
 | created_at   | timestamp        | NO   |     | CURRENT_TIMESTAMP |                             |
 | updated_at   | timestamp        | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |
 
-# Image
+# image
 
 | Field      | Type             | Null | Key | Default           | Extra                       |
 | :--------- | :--------------- | :--- | --- | ----------------- | --------------------------- |
@@ -31,7 +31,7 @@
 | created_at | timestamp        | NO   |     | CURRENT_TIMESTAMP |                             |
 | updated_at | timestamp        | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |
 
-# Thumbnail
+# thumbnail
 
 | Field      | Type             | Null | Key     | Default           | Extra                       |
 | :--------- | :--------------- | :--- | ------- | ----------------- | --------------------------- |
@@ -41,7 +41,7 @@
 | updated_at | timestamp        | NO   |         | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |
 
 
-# Tag
+# tag
 
 | Field      | Type             | Null | Key | Default           | Extra                       |
 | :--------- | :--------------- | :--- | --- | ----------------- | --------------------------- |
