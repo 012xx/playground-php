@@ -159,6 +159,13 @@ main .text {
   background-color: #a432aa;
   color: #fff;
   border: 2px solid #a432aa;
+  margin-right: 3.2rem;
+}
+
+#signup {
+  background-color: #fff;
+  color: #bb65bf;
+  border: 2px solid #bb65bf;
 }
 
 @media screen and (max-width: 767px) {

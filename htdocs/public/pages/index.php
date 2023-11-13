@@ -16,8 +16,8 @@
 
   <body>
     <header id="header">
-      <button id="login" popovertarget="Modal">ログイン
-      </button>
+      <button id="signup">新規登録</button>
+      <button id="login">ログイン</button>
     </header>
 
     <div id="blog" class="wrapper">

@@ -13,13 +13,14 @@ html {
   padding: 0.8rem;
   background-color: #f3f3f3;
   border-bottom: 1px solid #e1e1e1;
-  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.2);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
 
 #save-draft,
 #publish,
-#login {
+#login,
+#signup {
   padding: 0.4rem 1.2rem;
   margin-left: 0.8rem;
   border: none;
@@ -27,12 +28,12 @@ html {
   cursor: pointer;
   outline: none;
   font-size: 1.2rem;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
 }
 
 #save-draft:hover,
 #publish:hover,
-#login:hover {
+#login:hover #siginup {
   opacity: 0.8;
 }
