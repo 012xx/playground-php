@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
 
   <body>
@@ -21,19 +21,19 @@
 
     <div id="blog" class="wrapper">
       <article>
-        <img src="images/photo1.jpg" alt="テキストテキストテキスト" class="thumbnail">
+        <img src="../images/photo1.jpg" alt="テキストテキストテキスト" class="thumbnail">
         <h2 class="article-title">タイトルテキストテキストテキストテキストテキストテキストテキスト</h2>
         <div class="readmore"><a href="#">READ MORE</a></div>
       </article>
 
       <article>
-        <img src="images/photo1.jpg" alt="テキストテキストテキスト" class="thumbnail">
+        <img src="../images/photo1.jpg" alt="テキストテキストテキスト" class="thumbnail">
         <h2 class="article-title">タイトルテキストテキストテキストテキストテキストテキストテキスト</h2>
         <div class="readmore"><a href="#">READ MORE</a></div>
       </article>
 
       <article>
-        <img src="images/photo1.jpg" alt="テキストテキストテキスト" class="thumbnail">
+        <img src="../images/photo1.jpg" alt="テキストテキストテキスト" class="thumbnail">
         <h2 class="article-title">タイトルテキストテキストテキストテキストテキストテキストテキスト</h2>
         <div class="readmore"><a href="#">READ MORE</a></div>
       </article>
