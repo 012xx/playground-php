@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>playground-php</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキス">
+    <meta name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
