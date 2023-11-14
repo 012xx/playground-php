@@ -16,8 +16,8 @@
 
   <body>
     <header id="header">
-      <button id="signup">新規登録</button>
-      <button id="login">ログイン</button>
+      <a href="/pages/signup.php"><button id="signup">新規登録</button></a>
+      <a href="/pages/login.php"><button id="login">ログイン</button></a>
     </header>
 
     <div id="blog" class="wrapper">
