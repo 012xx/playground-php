@@ -54,8 +54,8 @@ body {
   cursor: pointer;
   outline: none;
   font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: 1rem;
+  font-weight: 700;
+  margin: 1rem 0;
 }
 
 #firstsignup:hover {
@@ -73,6 +73,10 @@ body {
 }
 
 .text {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-bottom: 2rem;
+}
+
+.link {
+  font-size: 1.4rem;
 }
