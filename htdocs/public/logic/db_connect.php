@@ -1,6 +1,6 @@
 <?php
 /*　データベースの接続情報を定数に格納する */
-$dsn = 'mysql:dbname=plarground-php;host=localhost';
+$dsn = 'mysql:dbname=playground-db;host=playground-mysql';
 $user = 'root';
 $password = 'root';
 
@@ -11,6 +11,7 @@ try {
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_EMULATE_PREPARES =>false
     ]);
+    echo "connected pdo";
 } catch (PDOException $e) {
     echo 'ERROR: Could not connect.'.$e->getMessage()."\n";
     exit();
