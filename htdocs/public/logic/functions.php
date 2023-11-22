@@ -11,11 +11,18 @@ function setToken(){
 }
 
 //セッション変数のトークンとPOSTされたトークンをチェック
-function checkToken(){
-    if(empty($_SESSION['token']) || ($_SESSION['token'] != $_POST['token'])){
-        echo 'Invalid POST', PHP_EOL;
-        exit;
+function checkToken(): bool{
+    $is_token = array_key_exists('token', $_SESSION);
+    if (!$is_token) {
+        echo 'Not exists csrf token';
+        return false;
     }
+    if ($_SESSION["token"] !== $_POST["token"]) {
+        echo 'Invalid csrf token';
+        return false;
+    }
+
+    return true;
 }
 
 //POSTされた値のバリデーション

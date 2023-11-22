@@ -9,13 +9,16 @@ $datas = [
     'password'  => '',
 ];
 
-if($_SERVER['REQUEST_METHOD'] != 'POST'){
+if($_SERVER['REQUEST_METHOD'] !== 'POST'){
     setToken();
 }
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if($_SERVER["REQUEST_METHOD"] === "POST"){
     //CSRF対策
-    checkToken();
+    if (checkToken() === false) {
+        http_response_code(401);
+        exit();
+    }
 
     // POSTされてきたデータを変数に格納
     foreach($datas as $key => $value) {
@@ -26,6 +29,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // バリデーション
     $errors = validation($datas);
+
+    $pdo = DbConnect::getPdo();
 
     //データベースの中に同一ユーザー名が存在していないか確認
     if(empty($errors['name'])){
@@ -89,7 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <div class="wrapper">
     <h2 class="welcome">playground-phpへようこそ！</h2>
     <p class="text">新規登録して利用を開始しましょう。</p>
-    <form action="register.php" method="post" >
+    <form action="signup.php" method="post" >
         <div class="cp_iptxt">
             <label class="ef">
                 <input type="text" placeholder="ユーザー名" name="name" required>
@@ -103,6 +108,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="button">
             <button id="firstsignup" type="submit">新規登録</button>
         </div>
+        <input type="text" name="token" value="<?php echo $_SESSION['token'] ?>" hidden>
     </form>
 </div>
 </body>
