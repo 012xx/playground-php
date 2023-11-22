@@ -4,11 +4,6 @@ require_once "../logic/functions.php";
 
 session_start();
 
-$datas = [
-    'name'  => '',
-    'password'  => '',
-];
-
 if($_SERVER['REQUEST_METHOD'] !== 'POST'){
     setToken();
 }
@@ -20,23 +15,21 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         exit();
     }
 
-    // POSTされてきたデータを変数に格納
-    foreach($datas as $key => $value) {
-        if($value = filter_input(INPUT_POST, $key, FILTER_DEFAULT)) {
-            $datas[$key] = $value;
-        }
-    }
+    $data = [
+            "name" => $_POST["name"],
+        "password" => $_POST["password"]
+    ];
 
     // バリデーション
-    $errors = validation($datas);
+    $errors = validation($data);
 
     $pdo = DbConnect::getPdo();
 
     //データベースの中に同一ユーザー名が存在していないか確認
     if(empty($errors['name'])){
-        $sql = "SELECT id FROM users WHERE name = :name";
+        $sql = "SELECT user_id FROM user WHERE name = :name";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindValue('name',$datas['name'],PDO::PARAM_INT);
+        $stmt->bindValue('name',$data['name'],PDO::PARAM_INT);
         $stmt->execute();
         if($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             $errors['name'] = 'This username is already taken.';
@@ -46,8 +39,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     if(empty($errors)){
         $params = [
             'user_id' =>null,
-            'name'=>$datas['name'],
-            'password'=>password_hash($datas['password'], PASSWORD_DEFAULT),
+            'name'=>$data['name'],
+            'password'=>password_hash($data['password'], PASSWORD_DEFAULT),
             'created_at'=>null
         ];
 
