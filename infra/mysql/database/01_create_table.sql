@@ -2,7 +2,7 @@ USE playground-db;
 
 CREATE TABLE IF NOT EXISTS `user` (
     user_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(32) NOT NULL,
+    name VARCHAR(32) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
 

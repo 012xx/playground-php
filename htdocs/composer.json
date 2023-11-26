@@ -2,7 +2,9 @@
     "name": "user/playground-php",
     "description": "A simple PHP project using Docker.",
     "type": "project",
-    "require": {},
+    "require": {
+        "ext-pdo": "*"
+    },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
